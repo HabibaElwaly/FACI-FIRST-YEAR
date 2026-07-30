@@ -4,7 +4,7 @@
 # ==========================================
 
 # ------------------------------------------
-# Problem 1: Division / Floor Division
+# Problem A: Brick AtCoder abc186_a
 # ------------------------------------------
 data = input().split()
 n = int(data[0])
@@ -13,7 +13,7 @@ print(n // w)
 
 
 # ------------------------------------------
-# Problem 2: Sum of Squares (a^2 + b^2)
+# Problem B: Sum of squares EOlymp 519
 # ------------------------------------------
 data = input().split()
 a = int(data[0])
@@ -22,7 +22,7 @@ print(a**2 + b**2)
 
 
 # ------------------------------------------
-# Problem 3: Watermelon (Codeforces)
+# Problem C: Watermelon CodeForces 4A
 # ------------------------------------------
 w = int(input())
 if w % 2 == 0 and w > 2:
@@ -32,21 +32,7 @@ else:
 
 
 # ------------------------------------------
-# Problem 4: Lucky Ticket Check
-# ------------------------------------------
-t = int(input())
-for i in range(t):
-    s = input()
-    sum1 = int(s[0]) + int(s[1]) + int(s[2])
-    sum2 = int(s[3]) + int(s[4]) + int(s[5])
-    if sum1 == sum2:
-        print("YES")
-    else:
-        print("NO")
-
-
-# ------------------------------------------
-# Problem 5: Word Case Adjustment
+# Problem E: Lucky? CodeForces 1676A
 # ------------------------------------------
 s = input()
 upper_count = 0
@@ -63,7 +49,7 @@ else:
 
 
 # ------------------------------------------
-# Problem 6: Codeforces Checking / Character Diff
+# Problem F: Word CodeForces 59A
 # ------------------------------------------
 target = "codeforces"
 t = int(input())
@@ -77,7 +63,7 @@ for i in range(t):
 
 
 # ------------------------------------------
-# Problem 7: Yes or Yes Check
+# Problem G: Love Story CodeForces 1829A
 # ------------------------------------------
 t = int(input())
 for i in range(t):
@@ -89,7 +75,7 @@ for i in range(t):
 
 
 # ------------------------------------------
-# Problem 8: Translation (Reversed String Check)
+# Problem H: YES or YES? CodeForces 1703A
 # ------------------------------------------
 s = input()
 t = input()
@@ -100,7 +86,7 @@ else:
 
 
 # ------------------------------------------
-# Problem 9: Sum of Two Elements Equals Third (Indices Finder)
+# Problem I: Translation CodeForces 41A
 # ------------------------------------------
 n = int(input())
 a = input().split()
@@ -124,7 +110,7 @@ if not found:
 
 
 # ------------------------------------------
-# Problem 10: Check Unique / Distinct Elements
+# Problem J: Worms Evolution CodeForces 31A
 # ------------------------------------------
 t = int(input())
 for i in range(t):
@@ -148,7 +134,29 @@ for i in range(t):
 
 
 # ------------------------------------------
-# Problem 11: Grid Row Letter Detection (R or B)
+# Problem K: Increasing CodeForces 1742B
+# ------------------------------------------
+t = int(input())
+for i in range(t):
+    n_val = int(input())
+    s_vals = input().split()
+    a_list = [int(x) for x in s_vals]
+    possible = True
+    for first_index in range(n_val):
+        for second_index in range(first_index + 1, n_val):
+            if a_list[first_index] == a_list[second_index]:
+                possible = False
+                break
+        if not possible:
+            break
+    if possible:
+        print("YES")
+    else:
+        print("NO")
+
+
+# ------------------------------------------
+# Problem L: Stripes CodeForces 1742C
 # ------------------------------------------
 t = int(input())
 for i in range(t):
